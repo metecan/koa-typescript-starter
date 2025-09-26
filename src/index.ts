@@ -1,15 +1,14 @@
 import Koa from "koa";
 import { router } from "@/routes";
-import logger from "./middleware/logger";
+import logger from "@/middleware/logger";
+import CONFIG from "@/lib/config";
 
 const app = new Koa();
-
-const port = 3000;
 
 app.use(logger());
 
 app.use(router.routes()).use(router.allowedMethods());
 
-app.listen(port, () => {
-  console.log("server running on :" + port);
+app.listen(CONFIG.PORT, () => {
+  console.log("server running on :" + CONFIG.PORT);
 });
