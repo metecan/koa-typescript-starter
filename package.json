@@ -9,7 +9,7 @@
     "start": "node dist/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "metecan",
   "license": "ISC",
   "packageManager": "pnpm@10.14.0",
   "devDependencies": {
