@@ -1,10 +1,5 @@
-import Router from '@koa/router';
-import Application from 'koa';
+import { type Context, type Next as KoaNext } from 'koa';
 
-export type Ctx = Application.ParameterizedContext<
-  Application.DefaultState,
-  Application.DefaultContext & Router.RouterParamContext<Application.DefaultState, Application.DefaultContext>,
-  unknown
->;
+export type Ctx = Context;
 
-export type Next = Application.Next;
+export type Next = KoaNext;
